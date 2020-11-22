@@ -1,0 +1,18 @@
+.finalize{
+    display: flex;
+    justify-content: space-between;
+}
+.final-preview{
+    width: 65%;
+    height: 760px;
+    box-shadow: 0 2px 9px rgba(186 , 186 , 186 , 0.5);
+    margin-top: 5%;
+    margin-left: 5%;
+
+}
+.final-templates{
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 4%;
+}

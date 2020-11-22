@@ -1,0 +1,26 @@
+.about-page{
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-logo{
+    margin-top: 2%;
+    height: 450px;
+    width: 450px;
+}
+.about-logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.message{
+    margin-top: 10%;
+    margin-left: 4%;
+}
+h1{
+    /* margin-right: 7%; */
+    margin-left: 0%;
+    color: cadetblue;
+}
+p{
+    font-weight: bold;
+}

@@ -1,0 +1,112 @@
+
+
+.loginpage{
+    /* background: green; */
+    display: flex;
+    height: calc(100vh-60px);
+}
+.loginpage-logo{
+    height: 550px;
+    width: 65%;
+    margin-left: 2%;
+
+}
+.loginpage-logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.loginpage-info{
+    background: aquamarine;
+    align-items: center;
+    margin-top: 11%;
+    margin-left: 23%;
+    margin-right: 60px;
+    font-size: x-large;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 10px 10px 10px 100px;
+    animation: mymove 1.75s infinite ;
+    width: 32%;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 150px;
+
+
+}
+
+.loginpage-info:hover{
+    background-color: #1EAEDB;
+}
+#email:hover,#password:hover{
+    background-color:#34495e ;
+}
+@keyframes mymove {
+    0% {border-radius: 10px 10px 10px 100px;}
+   25% {border-radius: 100px 10px 20px 10px;}
+   50% {border-radius: 10px 100px 10px 20px;}
+   75% {border-radius: 20px 10px 100px 10px;}
+  100% {border-radius: 10px 10px 10px 100px;}
+}
+form{
+    
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: absolute;
+}
+label{
+    border: none;
+    outline:none;
+
+}
+#email{
+    height: 35px;
+    width: 300px;
+    margin-top: 13%;
+    border-radius: 15px 15px 15px 15px;
+    background: aquamarine;
+    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+    color: white;
+    border: none;
+    outline:none;
+}
+#password{
+    height: 35px;
+    width: 300px;
+    margin-top: 13%;
+    font-weight: bolder;
+    border-radius: 15px 15px 15px 15px;
+    background: aquamarine;
+    box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    outline: none;    
+}
+
+.login-btn{
+    /* height: 35px; */
+    width: 300px;
+    margin-top: 13%;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+    background: transparent;
+    border: 2px solid #70e1f5 ;
+    /* color: white; */
+    /* box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.5);    */
+    outline: none;
+}
+
+
+.login-btn:hover{
+    border: none;
+    border: 2px solid #70e1f5 ;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+    background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%);
+}

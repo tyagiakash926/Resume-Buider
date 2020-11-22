@@ -1,0 +1,81 @@
+.templates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    /* background: chocolate; */
+    height: 450px;
+    justify-content: space-around;
+
+}
+.templates-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.templates-styles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 50%;
+}
+.template {
+    /* background: red; */
+    height: 280px;
+    width: 250px;
+    position: relative;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item img{
+    width: 110px;
+    height: 500px;
+  }
+
+.template img {
+    /* background: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.template img:hover {
+    opacity: 0.6;
+  }
+
+.template-btn {
+    background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border:1px solid white;
+    position: absolute;
+    top:50%;
+    left: 25%;
+    cursor: pointer;
+}
+.selected-skin{
+    box-shadow: 0 2px 9px rgba(186, 186, 186, 0.5);
+}
+
+.selected-skin:hover{
+
+}
+
+.fa-check-circle{
+    font-size: 112px;
+    position: absolute;
+    top: 32%;
+    left: 30%;
+    color: aqua;
+    cursor: pointer;
+}
+
+.fa-check-circle:hover{
+    color:black
+}
