@@ -11,7 +11,7 @@ import Education from './components/Education';
 import Finalize from './components/Finalize';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-
+//hii
 function App() {
   return (<React.Fragment>
           <Header />
