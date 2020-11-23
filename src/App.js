@@ -31,9 +31,7 @@ function App() {
             </Route>
             <Route path="/contact" exact component={Contact}></Route>
             <Route path="/education" exact component={Education}></Route>
-            <Route path="/finalize" exact>
-              <Finalize></Finalize>
-            </Route>
+            <Route path="/finalize" exact component={Finalize}></Route>
             <Route path="/skills" exact component={Skills}></Route>
             <Route path="/projects" exact component={Projects}></Route>
           </Switch>

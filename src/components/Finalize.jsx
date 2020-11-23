@@ -15,8 +15,26 @@ class Finalize extends Component {
         education : this.props.educationDetails,
         skills : this.props.skills,
         projects: this.props.projects,
-        skinCode : this.props.skinCode
-     }
+        skinCode : this.props.skinCode,
+    }
+
+    handleSkinSelect = (skinCode) =>{
+        //  console.log(skinCode);
+        this.props.changeSkinCode(skinCode);
+        // this.props.history.push("/contact");
+       }
+
+       componentDidMount(){
+        console.log("inside mount" , this.props.skinCode);
+      }
+
+      componentWillReceiveProps(newProps){
+        console.log(newProps);
+        this.setState({
+          skinCode : newProps.skinCode
+        })
+        }
+
     render() { 
         console.log(this.props);
         let {contact , education , skills , projects , skinCode } = this.state;
@@ -29,27 +47,19 @@ class Finalize extends Component {
                     <div className="final-templates">
                     <div className="template">
                         <img src={skin1} alt=""/>
-                        <Link to="/contact">
-                            <button class="template-btn">USE TEMPLATE</button>
-                        </Link>
+                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin1")} }>USE TEMPLATE</button>
                     </div>
                     <div className="template">
                         <img src={skin2} alt=""/>
-                        <Link to="/contact">
-                            <button class="template-btn">USE TEMPLATE</button>
-                        </Link>
+                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin2")} }>USE TEMPLATE</button>
                     </div>
                     <div className="template">
                         <img src={skin3} alt=""/>
-                        <Link to="/contact">
-                            <button class="template-btn">USE TEMPLATE</button>
-                        </Link>
+                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin3")} }>USE TEMPLATE</button>
                     </div>
                     <div className="template">
                         <img src={skin4} alt=""/>
-                        <Link to="/contact">
-                            <button class="template-btn">USE TEMPLATE</button>
-                        </Link>
+                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin4")} }>USE TEMPLATE</button>
                     </div>
                     </div>
                 </div>
@@ -67,5 +77,12 @@ const mapStateToProps = (state) =>{
         skinCode : state.document.skinCode
     }
     }
+
+    const mapDispatchToProps = (dispatch) =>{
+        return{
+            changeSkinCode : (skinCode) => {  dispatch( {type:"CHANGE_SKIN" , skinCode : skinCode} )}
+        }
+    }
+    
  
-export default connect(mapStateToProps)(Finalize);
+export default connect(mapStateToProps , mapDispatchToProps)(Finalize);
