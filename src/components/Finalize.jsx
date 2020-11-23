@@ -14,16 +14,17 @@ class Finalize extends Component {
         contact : this.props.contactDetails,
         education : this.props.educationDetails,
         skills : this.props.skills,
-        projects: this.props.projects
+        projects: this.props.projects,
+        skinCode : this.props.skinCode
      }
     render() { 
         console.log(this.props);
-        let {contact , education , skills , projects } = this.state;
+        let {contact , education , skills , projects , skinCode } = this.state;
         return ( 
             <React.Fragment>
                 <div className="finalize">
                     <div className="final-preview">
-                        <Preview contact={contact} education={education} skills={skills} projects={projects}></Preview>
+                        <Preview contact={contact} education={education} skills={skills} projects={projects} skin={skinCode}></Preview>
                     </div>
                     <div className="final-templates">
                     <div className="template">
@@ -62,7 +63,8 @@ const mapStateToProps = (state) =>{
         contactDetails : state.contactDetails,
         educationDetails : state.educationDetails,
         skills : state.skills,
-        projects : state.projects
+        projects : state.projects,
+        skinCode : state.document.skinCode
     }
     }
  

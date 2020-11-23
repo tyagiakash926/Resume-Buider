@@ -11,7 +11,8 @@ class Skills extends Component {
         contact : this.props.contactDetails,
         education : this.props.educationDetails,
         skills : this.props.skills,
-        projects : this.props.projects
+        projects : this.props.projects,
+        skinCode : this.props.skinCode
         };
 
     handleShareholderNameChange = (idx) => (evt) => {
@@ -48,7 +49,7 @@ class Skills extends Component {
     }
      
     render() { 
-        let {contact , education , skills , projects} = this.state;
+        let {contact , education , skills , projects , skinCode} = this.state;
         return (
             <div className="skills-list">
                  <div className="contact-form">
@@ -77,7 +78,7 @@ class Skills extends Component {
                     </div>
                  </div>
                  <div className="preview-form">
-                        <Preview contact={contact} education={education} skills={skills} projects={projects}></Preview>
+                        <Preview contact={contact} education={education} skills={skills} projects={projects} skin={skinCode}></Preview>
                     </div>
             </div>
               
@@ -91,7 +92,8 @@ const mapStateToProps = (state) =>{
         contactDetails : state.contactDetails,
         educationDetails : state.educationDetails,
         skills : state.skills,
-        projects : state.projects
+        projects : state.projects,
+        skinCode : state.document.skinCode
     }
 }
 const mapDispatchToProps = (dispatch) =>{
