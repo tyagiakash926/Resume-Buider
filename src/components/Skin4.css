@@ -1,0 +1,130 @@
+.contact-details-skin4{
+    display: flex;
+    flex-direction: column;
+    /* background: greenyellow; */
+    width: 90%;
+    color: darkslategray;
+    margin-left: 5%;
+}
+.full-name-s4{
+    font-size: 65px;
+    font-weight: 400;
+}
+.full-address{
+    display: flex;
+    /* margin: -1px; */
+    margin-top: -2%;
+    word-spacing: 10px;
+    font-size: small;
+}
+.profession-s4{
+    font-size: 30px;
+    color: grey;
+}
+.professional-summary-skin4{
+    display: flex;
+    margin-top: 3%;
+    flex-direction: column;
+    /* background: greenyellow; */
+    width: 90%;
+    color: darkslategray;
+    margin-left: 5%;
+
+}
+.professional-summary-heading-s4{
+    background: rgb(216, 216, 216);
+    text-align-last: end;
+    font-weight: bold;
+}
+.professional-summary-details-s4{
+    margin-top: 2%;
+    font-size: small;
+    
+}
+.Skills-details-skin4{
+    display: flex;
+    margin-top: 3%;
+    flex-direction: column;
+    /* background: greenyellow; */
+    width: 90%;
+    color: darkslategray;
+    margin-left: 5%;
+}
+.skills-details-heading-s4{
+    background: rgb(216, 216, 216);
+    text-align-last: end;
+    font-weight: bold;
+}
+.skills-details-s4{
+    font-weight: bold;
+    /* max-width: 75%; */
+}
+.skills-details-s4 ul{
+    display: flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    margin-left: -12%;
+}
+.skills-details-s4 ul li{
+    margin-left: 8%;
+    
+}
+.projects-details-skin4{
+    display: flex;
+    margin-top: 3%;
+    flex-direction: column;
+    /* background: greenyellow; */
+    width: 90%;
+    color: darkslategray;
+    margin-left: 5%;
+
+}
+.projects-details-heading-s4{
+    background: rgb(216, 216, 216);
+    text-align-last: end;
+    font-weight: bold;
+}
+.projects-details-s4 ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-left: -12%;
+}
+.projects-details-s4 ul li{
+    margin-left: 8%;
+    min-width: 75%;
+    max-width: 85%;
+}
+.projects-details-s4{
+    font-weight: bold;
+}
+.education-details-skin4{
+    display: flex;
+    margin-top: 3%;
+    flex-direction: column;
+    /* background: greenyellow; */
+    width: 90%;
+    color: darkslategray;
+    margin-left: 5%;
+}
+.education-details-heading-s4{
+    background: rgb(216, 216, 216);
+    text-align-last: end;
+    font-weight: bold;
+}
+.education-details-s4{
+
+}
+.education-details-degree-s4{
+    font-weight: bold;
+    font-size: small;
+    width: 90%;
+    margin-top: 2%;
+}
+.education-details-name-s4{
+    font-size: small;
+    width: 90%;
+   font-weight: bold;
+    font-weight: 300;
+    text-align: justify;
+}

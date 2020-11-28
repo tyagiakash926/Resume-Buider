@@ -1,142 +1,158 @@
-.contact-details-skin3 {
+.contact-details-skin5 {
+    width: 92%;
     display: flex;
     margin-left: 5%;
+    /* border: 1px solid; */
+    border-bottom: 2px solid lightgray;
+    padding: 2%;
 }
-.contact-details-name-s3 {
+.contact-details-name-s5 {
     /* height: 60%; */
     width: 10%;
     /* margin-left: 3%; */
     /* background: blue; */
     /* height: 90%; */
 }
-.contact-details-logo-s3 {
-    background: rgb(52, 152, 235);
+.contact-details-logo-s5 {
+    background: rgb(253, 208, 84);
     height: 74%;
     color: white;
     text-align: center;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
     /* vertical-align: 11%; */
     margin-top: 37%;
     line-height: 84px;
     margin-left: -9%;
     font-size: 48px;
 }
-.both-name-email-s3 {
+.both-name-email-s5 {
     margin-left: 1%;
 }
-.contact-details-fullName-s3 {
+.contact-details-fullName-s5 {
     /* margin-left: 7%; */
     font-size: 65px;
     font-weight: 600;
 }
-.contact-details-email-phone-s3 {
+.contact-details-email-phone-s5 {
     display: flex;
     margin-left: 0%;
     margin: 0px;
     padding: 0px;
     width: 108%;
 }
-.contact-details-address-s3 {
+.contact-details-address-s5 {
     margin-left: 2%;
 }
-.contact-details-phone-s3 {
+.contact-details-phone-s5 {
     margin-left: 3%;
 }
-.contact-details-email-s3 {
+.contact-details-email-s5 {
     margin-left: 2%;
 }
-.professional-summary-details-s3 {
+.professional-summary-details-s5 {
     max-width: 75%;
     font-size: small;
+    
+    
 }
-.professional-summary-heading-s3 {
+.professional-summary-heading-s5 {
     width: 25%;
-    color:rgb(52, 152, 235);
+    color:rgb(253, 208, 84);
     /* font-size: 16px; */
     font-weight: bolder;
 }
-.professional-summary-skin3 {
+.professional-summary-skin5 {
     display: flex;
     margin-left: 5%;
-    margin-top: 3%;
+    /* margin-top: 3%; */
+    padding: 2%;
     width: 90%;
+    border-bottom: 2px solid lightgray;
 }
-.Skills-details-skin3{
+.Skills-details-skin5{
     display: flex;
     margin-left: 5%;
-    margin-top: 3%;
+    /* margin-top: 3%; */
+    padding: 2%;
     width: 90%;
+    border-bottom: 2px solid lightgray;
 }
-.skills-details-heading-s3{
+.skills-details-heading-s5{
     width: 25%;
-    color:rgb(52, 152, 235);
+    color:rgb(253, 208, 84);
     /* font-size: 16px; */
     font-weight: bolder;
 }
-.skills-details-s3{
+.skills-details-s5{
     font-weight: bold;
     max-width: 75%;
 
 }
-.skills-details-s3 ul{
+.skills-details-s5 ul{
     display: flex;
     flex-wrap: wrap;
     margin-left: -13%;
 }
-.skills-details-s3 ul li{
+.skills-details-s5 ul li{
     margin-left: 8%;
     
 }
-.projects-details-skin3{
+.projects-details-skin5{
     display: flex;
     margin-left: 5%;
-    margin-top: 3%;
+    /* margin-top: 3%; */
+    padding: 2%;
     width: 90%;
+    border-bottom: 2px solid lightgray;
 
 }
-.projects-details-heading-s3{
+.projects-details-heading-s5{
     width: 25%;
-    color:rgb(52, 152, 235);
+    color:rgb(253, 208, 84);
     /* font-size: 16px; */
     font-weight: bolder;
 }
-.projects-details-s3 ul{
+.projects-details-s5 ul{
     display: flex;
     flex-wrap: wrap;
     margin-left: -13%;
 }
-.projects-details-s3 ul li{
+.projects-details-s5 ul li{
     margin-left: 8%;
     min-width: 75%;
     max-width: 76%;
     
 }
-.projects-details-s3{
+.projects-details-s5{
     font-weight: bold;
     max-width: 75%;
 }
-.education-details-skin3{
+.education-details-skin5{
     display: flex;
     margin-left: 5%;
-    margin-top: 3%;
+    /* margin-top: 3%; */
+    padding: 2%;
     width: 90%;
+    border-bottom: 2px solid lightgray;
 }
-.education-details-heading-s3{
+.education-details-heading-s5{
     width: 25%;
-    color:rgb(52, 152, 235);
+    color:rgb(253, 208, 84);
     /* font-size: 16px; */
     font-weight: bolder;
 }
-.education-details-s3{
+.education-details-s5{
 
 }
-.education-details-degree-s3{
+.education-details-degree-s5{
     font-weight: bold;
     font-size: small;
     width: 90%;
     margin-left: 5%;
     margin-top: 8px;
 }
-.education-details-name-s3{
+.education-details-name-s5{
     font-size: small;
     width: 90%;
     margin-left: 5%;font-weight: bold;
