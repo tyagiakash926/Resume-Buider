@@ -101,6 +101,35 @@ label{
     outline: none;
 }
 
+.signin-google{
+    width: 300px;
+    height: 42px;
+    /* border: 2px solid #5f92e4; ; */
+    margin-top: 13%;
+    outline: none;
+    display: flex;
+    /* background:  #5f92e4; */
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+
+}
+.google-logo {
+   height: 100%;
+   width: 30%;
+    /* background: black; */
+}
+.google-logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    color: white;
+}
+.google-text{
+    width: 70%;
+    color:#5f92e4;
+    margin-left: -2%;
+}
+
 
 .login-btn:hover{
     border: none;

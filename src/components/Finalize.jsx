@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Finalize.css';
 import { connect } from 'react-redux';
+import {skinCodes} from '../Constants/skinCodes'
 import Preview from './Preview';
 import skin1 from "../static/images/skin1.svg";
 import skin2 from "../static/images/skin2.svg";
@@ -45,7 +46,17 @@ class Finalize extends Component {
                         <Preview contact={contact} education={education} skills={skills} projects={projects} skin={skinCode}></Preview>
                     </div>
                     <div className="final-templates">
-                    <div className="template">
+                    {skinCodes.map(  ( skin ) => {
+                    let className = skin.value == skinCode ? "selected-skin" : "";
+                    return <div key = {skin.id} className={`template ${className}`} >
+              <img src= {`/images/${skin.value}.svg`} alt="" />
+              {skin.value == skinCode?<i class="fa fa-check-circle" aria-hidden="true" onClick = { ()=> {this.handleSkinSelect(skin.value)} }></i>:<button class="template-btn" onClick = { ()=> {this.handleSkinSelect(skin.value)} }>USE TEMPLATE</button>}
+              
+            </div>
+        })}
+
+
+                    {/* <div className="template">
                         <img src={skin1} alt=""/>
                             <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin1")} }>USE TEMPLATE</button>
                     </div>
@@ -60,7 +71,7 @@ class Finalize extends Component {
                     <div className="template">
                         <img src={skin4} alt=""/>
                             <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin4")} }>USE TEMPLATE</button>
-                    </div>
+                    </div> */}
                     </div>
                 </div>
             </React.Fragment>

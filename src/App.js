@@ -11,31 +11,31 @@ import Education from './components/Education';
 import Finalize from './components/Finalize';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import { connect } from "react-redux";
+
 //hii  hello from akash
-function App() {
+function App(props) {
+  let {auth} = props;
   return (<React.Fragment>
           <Header />
           <Switch>
-            <Route path="/" exact> 
-              <Landing></Landing>
-            </Route> 
-            <Route path="/templates" exact component={Templates}></Route>
-            <Route path="/about" exact>
-              <About></About>
-            </Route>
-            <Route path="/register" exact>
-              <Register></Register>
-            </Route>
-            <Route path="/signin" exact>
-              <SignIn></SignIn>
-            </Route>
-            <Route path="/contact" exact component={Contact}></Route>
-            <Route path="/education" exact component={Education}></Route>
-            <Route path="/finalize" exact component={Finalize}></Route>
-            <Route path="/skills" exact component={Skills}></Route>
-            <Route path="/projects" exact component={Projects}></Route>
+            <Route path="/" exact component={Landing}></Route>
+            <Route path="/templates" exact component={auth ? Templates : SignIn}></Route>
+            <Route path="/about" exact component={About}></Route>
+            <Route path="/register" exact component={Register}></Route>
+            <Route path="/signin" exact component={SignIn}></Route>
+            <Route path="/contact" exact component={auth ? Contact : SignIn}></Route>
+            <Route path="/education" exact component={auth ? Education : SignIn}></Route>
+            <Route path="/finalize" exact component={auth ? Finalize : SignIn }></Route>
+            <Route path="/skills" exact component={ auth ? Skills : SignIn}></Route>
+            <Route path="/projects" exact component={auth ? Projects : SignIn}></Route>
           </Switch>
           </React.Fragment>);
 }
+const mapStateToProps = (state) =>{
+  return{
+    auth : state.auth.isAuth
+  }
+}
 
-export default App;
+export default connect(mapStateToProps)(App);
