@@ -56,6 +56,7 @@ class Templates extends Component {
    
   
   const mapStateToProps = (state) => {
+    console.log("isnide template map state" , state);
     return {
       skinCode : state.document.skinCode
     }

@@ -51,7 +51,7 @@ class Projects extends Component {
 
     componentWillReceiveProps(newProps){
         this.setState({
-            projects : {...newProps.projects}
+            projects : newProps.projects
         })
     }
 

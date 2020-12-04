@@ -38,13 +38,13 @@ class Skills extends Component {
         // navigate to /education
         // history object
         this.props.updateSkills(this.state.skills);
-
+        // console.log(this.state);
         this.props.history.push("/projects");
     }
 
     componentWillReceiveProps(newProps){
         this.setState({
-            skills : {...newProps.skills}
+            skills : newProps.skills
         })
     }
      
