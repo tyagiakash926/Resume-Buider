@@ -66,7 +66,7 @@
     flex-direction: column;
     margin-top: 7%;
 }
-#email-register{
+#emailregister{
     border: none;
     outline: none;
     height: 30px;
@@ -76,7 +76,7 @@
     box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.5);
 
 }
-#password-register{
+#passwordregister{
     border: none;
     outline: none;
     height: 30px;
@@ -86,7 +86,7 @@
     box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.5);
 
 }
-#cnfrm-password{
+#cnfrmpassword{
     border: none;
     outline: none;
     height: 30px;
@@ -112,7 +112,7 @@
     border: 2px solid #70e1f5 ;
 
 }
-.submit-btn:hover{
+/* .submit-btn:hover{
     border: none;
     border: 2px solid #70e1f5 ;
     color:white;
@@ -121,7 +121,7 @@
     animation: mymove 1.75s infinite ;
     background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%);
 
-}
+} */
 .register-logo{
     position: absolute;
     top: 20%;

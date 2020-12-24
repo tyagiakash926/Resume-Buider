@@ -3,6 +3,7 @@ import './Projects.css';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Preview from '../components/Preview';
+import { updateProject } from '../actions/projectsActions';
 
 class Projects extends Component {
     state = {
@@ -113,7 +114,7 @@ const mapStateToProps = (state) =>{
 }
 const mapDispatchToProps = (dispatch) =>{
     return{
-        updateProjects : (projects) => { dispatch( {type:"UPDATE_PROJECT" , projects : projects  }  ) },
+        updateProjects : (projects) => { dispatch( updateProject(projects)  ) },
     }
 }
 

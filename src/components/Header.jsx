@@ -4,12 +4,10 @@ import {Link} from "react-router-dom";
 import logo from '../static/images/—Pngtree—elephant logo design vector template_5045290.png'
 import { connect } from "react-redux";
 import { auth } from '../firebase/fbconfig';
-
+import { logout } from '../actions/authActions';
 
 const handleLogout = (logout) =>{
-    auth.signOut().then(()=>{
-        logout();
-    })
+    logout();
 }
 const Header = (props) => {
     let {auth} = props;
@@ -44,7 +42,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) =>{
     return{
-        logout : () =>{dispatch({type:"LOGOUT"})}
+        logout : () =>{dispatch(logout())}
     }
 }
  

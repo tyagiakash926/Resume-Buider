@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import {skinCodes} from '../Constants/skinCodes'
 
 import "./Templates.css";
+import { updateDocument } from '../actions/documentActions';
 
 class Templates extends Component {
     state = { 
@@ -64,7 +65,7 @@ class Templates extends Component {
   
   const mapDispatchToProps = (dispatch) =>{
     return{
-      changeSkinCode : (skinCode) => {  dispatch( {type:"CHANGE_SKIN" , skinCode : skinCode} )}
+      changeSkinCode : (skinCode) => {  dispatch(updateDocument(skinCode) )}
     }
   }
   

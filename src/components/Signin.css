@@ -91,7 +91,7 @@ label{
 .login-btn{
     /* height: 35px; */
     width: 300px;
-    margin-top: 13%;
+    margin-top: 20%;
     border-radius: 15px 15px 15px 15px;
     border: none;
     background: transparent;
@@ -138,4 +138,10 @@ label{
     border-radius: 5px;
     padding: 5px;
     background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%);
+}
+.error-message{
+    font-size: small;
+    color: red;
+    margin-top: 57%;
+    font-weight: 400;
 }

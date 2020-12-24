@@ -1,4 +1,4 @@
-import React from 'react';
+// import React, { useState } from 'react';
 import App from './App';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -9,7 +9,28 @@ import {createStore , applyMiddleware , compose} from "redux";
 import {Provider} from "react-redux";
 import {myReducer} from "./reducers/myReducer";
 import thunk from 'redux-thunk';
-const store = createStore(myReducer , compose(applyMiddleware(thunk) ,window.devToolsExtension ? window.devToolsExtension() : f => f));
+import { reactReduxFirebase , getFirebase} from 'react-redux-firebase';
+import { reduxFirestore , getFirestore } from 'redux-firestore';
+import { firebaseApp } from './firebase/fbconfig.js';
 
-ReactDOM.render(<Provider store={store}><Router> <App /></Router></Provider>,document.getElementById('root'));
+
+const store = createStore(
+    myReducer,
+    compose(
+      applyMiddleware(thunk.withExtraArgument({getFirebase , getFirestore})),
+      reactReduxFirebase(firebaseApp),
+      reduxFirestore(firebaseApp),
+      window.devToolsExtension ? window.devToolsExtension() : (f) => f,
+    )
+  );
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <Router>
+        {" "}
+        <App />{" "}
+      </Router>
+    </Provider>,
+    document.getElementById("root")
+  );
 

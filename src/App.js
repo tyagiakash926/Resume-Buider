@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Templates from './components/Templates';
@@ -11,11 +12,12 @@ import Education from './components/Education';
 import Finalize from './components/Finalize';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import { connect } from "react-redux";
+
 
 //hii  hello from akash
 function App(props) {
   let {auth} = props;
+  console.log(auth);
   return (<React.Fragment>
           <Header />
           <Switch>
@@ -33,7 +35,9 @@ function App(props) {
           </React.Fragment>);
 }
 const mapStateToProps = (state) =>{
+  console.log(state);
   return{
+    
     auth : state.auth.isAuth
   }
 }

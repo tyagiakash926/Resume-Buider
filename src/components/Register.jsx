@@ -1,11 +1,38 @@
 import React, { Component } from 'react';
 import './Register.css'
+import { connect } from 'react-redux';
+import {signup} from '../actions/authActions';
 import skin from '../static/images/—Pngtree—artificial intelligence technology touching the_4031587.png'
 
 
+
+
 class  Register extends Component {
-    state = {  }
+    state = { 
+        emailregister:"",
+        passwordregister:"",
+     }
+
+     onChangeHandler = (e) => {
+        e.preventDefault();
+        let id = e.target.id;
+        let value = e.target.value;
+    
+        this.setState({
+          ...this.state,
+          [id]: value,
+        });
+      };
+    
+      onsignUp = (e) =>{
+          e.preventDefault();
+          console.log(this.props)
+          this.props.signup(this.state);
+      }
+
+
     render() { 
+        
         return (<React.Fragment>
             <div className="hero">
             <div className="register-page">
@@ -13,15 +40,13 @@ class  Register extends Component {
                     <div className="register-page-form">
                         <form className="register-form">
                             <label htmlFor="email">Email
-                                <input type="email" className="email" id="email-register"/>
+                                <input type="email" className="email" id="emailregister" value={this.state.emailregister} onChange={(e)=>{this.onChangeHandler(e)}}/>
                             </label>
                             <label htmlFor="password">Password
-                                <input type="password" className="password" id="password-register"/>
+                                <input type="password" className="password" id="passwordregister" value={this.state.passwordregister} onChange={(e)=>{this.onChangeHandler(e)}}/>
                             </label>
-                            <label htmlFor="cnfrm-password">Cofrm Pw
-                                <input type="password" className="cnfrm-password" id="cnfrm-password"/>
-                            </label>
-                            <button type="submit" className="submit-btn">Submit</button>
+                            
+                            <button type="submit" className="submit-btn" onClick={(e)=>{this.onsignUp(e)}}>Submit</button>
                         </form>
                     </div>
                  </div>
@@ -34,5 +59,19 @@ class  Register extends Component {
          );
     }
 }
+
+const mapPropsToState = (state) =>{
+    return {
+        message : state.auth.message
+    }
+}
+
+
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        signup : (userDetails) => {dispatch(signup(userDetails))}
+    }
+}
+
  
-export default  Register;
+export default connect(mapPropsToState , mapDispatchToProps)(Register);

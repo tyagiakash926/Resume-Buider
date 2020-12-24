@@ -3,6 +3,7 @@ import './Skills.css';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Preview from '../components/Preview';
+import { updateSkills } from '../actions/skillsActions';
 
 
 class Skills extends Component {
@@ -98,7 +99,7 @@ const mapStateToProps = (state) =>{
 }
 const mapDispatchToProps = (dispatch) =>{
     return{
-        updateSkills : (skills) => { dispatch( {type:"UPDATE_SKILL" , skills : skills  }  ) },
+        updateSkills : (skills) => { dispatch( updateSkills(skills)) },
     }
 }
 
