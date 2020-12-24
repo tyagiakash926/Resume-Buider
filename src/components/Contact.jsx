@@ -121,6 +121,7 @@ class Contact extends Component {
 
 
 const mapStateToProps = (state) =>{
+    console.log(state);
     return{
         contactDetails : state.contactDetails,
         educationDetails : state.educationDetails,

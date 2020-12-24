@@ -22,15 +22,15 @@ function App(props) {
           <Header />
           <Switch>
             <Route path="/" exact component={Landing}></Route>
-            <Route path="/templates" exact component={auth ? Templates : SignIn}></Route>
+            <Route path="/templates" exact component={auth.uid ? Templates : SignIn}></Route>
             <Route path="/about" exact component={About}></Route>
             <Route path="/register" exact component={Register}></Route>
             <Route path="/signin" exact component={SignIn}></Route>
-            <Route path="/contact" exact component={auth ? Contact : SignIn}></Route>
-            <Route path="/education" exact component={auth ? Education : SignIn}></Route>
-            <Route path="/finalize" exact component={auth ? Finalize : SignIn }></Route>
-            <Route path="/skills" exact component={ auth ? Skills : SignIn}></Route>
-            <Route path="/projects" exact component={auth ? Projects : SignIn}></Route>
+            <Route path="/contact" exact component={auth.uid ? Contact : SignIn}></Route>
+            <Route path="/education" exact component={auth.uid ? Education : SignIn}></Route>
+            <Route path="/finalize" exact component={auth.uid ? Finalize : SignIn }></Route>
+            <Route path="/skills" exact component={ auth.uid ? Skills : SignIn}></Route>
+            <Route path="/projects" exact component={auth.uid ? Projects : SignIn}></Route>
           </Switch>
           </React.Fragment>);
 }
@@ -38,7 +38,7 @@ const mapStateToProps = (state) =>{
   console.log(state);
   return{
     
-    auth : state.auth.isAuth
+    auth : state.firebase.auth
   }
 }
 

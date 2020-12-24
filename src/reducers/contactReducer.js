@@ -6,5 +6,9 @@ export const contactReducer = (state = initialState.contactDetails , action) => 
             ...action.contactDetails,
         };
     }
+    else if(action.type == "FAILED_UPDATE_CONTACT"){
+        console.log(action.error);
+        return state
+    }
     return state;
 };

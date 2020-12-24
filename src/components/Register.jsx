@@ -28,6 +28,7 @@ class  Register extends Component {
           e.preventDefault();
           console.log(this.props)
           this.props.signup(this.state);
+          this.props.history.push("/templates")
       }
 
 

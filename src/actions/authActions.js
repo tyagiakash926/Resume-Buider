@@ -4,9 +4,32 @@ import {initialState} from '../reducers/intialState'
 export const login = (userDetails) =>{
     return(dispatch , getState , {getFirebase , getFirestore} ) =>{
         // async calls
+        let guid;
+        let guser;
         // fire mei user h toh login nhi toh message login failed
+        let db = getFirestore(); // db functions 
         let firebase = getFirebase(); // auth functions getFirebase;
         firebase.auth().signInWithEmailAndPassword(userDetails.email ,userDetails.password).then( obj =>{
+            guid = obj.user.uid;
+            guser = obj.user;
+            // check if resume document is already present
+            return Promise.all([ db.collection("users").doc(guid).get(),db.collection('resumes').doc(guid).get() ])
+        })
+        .then(( combineUsersAndResumes  )=>{
+            let userDoc = combineUsersAndResumes[0];
+            let doc = combineUsersAndResumes[1];
+            // console.log(userDoc.data());
+            if(!userDoc.data()){
+                db.collection("users").doc(guid).set({
+                    email:guser.email
+                })
+            }
+            if(!doc.data()){
+                // create a template
+                db.collection("resumes").doc(guid).set(initialState)
+            }
+        })
+        .then(()=>{
             dispatch(  {type:"LOGIN" , userDetails: userDetails} );
         })
         .catch((err)=>{
@@ -46,7 +69,7 @@ export const signup = (userDetails)=>{
         // console.log(user);
         .then(obj =>{
             console.log(obj.user);
-            // uid = obj.user.uid;
+            uid = obj.user.uid;
             return firestore.collection("users").doc(obj.user.uid).set({
                 email: userDetails.emailregister,
             })

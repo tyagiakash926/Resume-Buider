@@ -49,7 +49,7 @@ class SignIn  extends Component {
         e.preventDefault()
         this.props.login(this.state);
         // console.log(this.props);
-        this.props.history.push("/templates");
+        this.props.history.push("/");
       };
 
     render() { 
