@@ -2,6 +2,7 @@ const { initialState } = require("./intialState");
 
 export const contactReducer = (state = initialState.contactDetails , action) => {
     if(action.type == "UPDATE_CONTACT"){
+        // console.log("from contact reducer",action.contactDetails);
         return {
             ...action.contactDetails,
         };

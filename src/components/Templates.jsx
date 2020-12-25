@@ -60,9 +60,9 @@ class Templates extends Component {
             </div>
         })}
           </div>
-          <div className="preview-form-template">
+          {/* <div className="preview-form-template">
             <Preview contact={contact}   education = {education} skills={skills} projects={projects} skin={skinCode} ></Preview>
-          </div>
+          </div> */}
         </div>
 
       );
@@ -71,7 +71,7 @@ class Templates extends Component {
    
   
   const mapStateToProps = (state) => {
-    console.log("isnide template map state" , state);
+    // console.log("isnide template map state" , state);
     return {
       contactDetails : state.contactDetails,
       educationDetails : state.educationDetails,

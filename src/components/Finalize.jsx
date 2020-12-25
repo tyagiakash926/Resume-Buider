@@ -36,8 +36,13 @@ class Finalize extends Component {
 
     render() { 
         const ref = React.createRef();
-        console.log(this.props);
+        // console.log(this.props);
         let {contact , education , skills , projects , skinCode } = this.state;
+        contact = this.props.contactDetails;
+        education=this.props.educationDetails;
+        skills = this.props.skills;
+        projects=this.props.projects;
+        // skinCode =this.props.skinCode;
         return ( 
             <React.Fragment>
                 <div className="finalize">
@@ -63,24 +68,6 @@ class Finalize extends Component {
               
             </div>
         })}
-
-
-                    {/* <div className="template">
-                        <img src={skin1} alt=""/>
-                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin1")} }>USE TEMPLATE</button>
-                    </div>
-                    <div className="template">
-                        <img src={skin2} alt=""/>
-                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin2")} }>USE TEMPLATE</button>
-                    </div>
-                    <div className="template">
-                        <img src={skin3} alt=""/>
-                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin3")} }>USE TEMPLATE</button>
-                    </div>
-                    <div className="template">
-                        <img src={skin4} alt=""/>
-                            <button class="template-btn" onClick = { ()=> {this.handleSkinSelect("skin4")} }>USE TEMPLATE</button>
-                    </div> */}
                     </div>
                 </div>
             </React.Fragment>

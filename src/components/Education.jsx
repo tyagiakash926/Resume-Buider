@@ -17,7 +17,6 @@ class Education extends Component {
         e.preventDefault();
         let key = e.target.id;
         let value = e.target.value;
-
         this.setState({
             education : {...this.state.education , [key]:value } 
         })
@@ -41,6 +40,11 @@ class Education extends Component {
 
     render() { 
         let {contact , education , skills , projects , skinCode} = this.state;
+        contact = this.props.contactDetails;
+        // education=this.props.educationDetails;
+        skills = this.props.skills;
+        projects=this.props.projects;
+        skinCode =this.props.skinCode;
         return ( 
             <div className="contact">
             <div className="contact-form">
@@ -97,12 +101,14 @@ class Education extends Component {
 
 
 const mapStateToProps = (state) =>{
+    console.log("state in education props" , state);
 return {
     contactDetails : state.contactDetails,
     educationDetails : state.educationDetails,
     skills : state.skills,
     projects: state.projects,
-    skinCode : state.document.skinCode
+    skinCode : state.document.skinCode,
+    firebaseData : state.firestore.data
 }
 }
 

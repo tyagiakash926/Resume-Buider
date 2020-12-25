@@ -12,10 +12,10 @@ import { updateState } from '../actions/updateActions';
 class Landing  extends Component {
     state = {  }
     getStartedHandler = () =>{
-        console.log(this.props);
+        // console.log(this.props);
         let uid = this.props.firebaseAuth.uid;
         let data = this.props.firebaseData.resumes[uid];
-        console.log(data);
+        // console.log(data);
         // dispatch ????
         this.props.updateState(data);
         this.props.history.push("/templates");

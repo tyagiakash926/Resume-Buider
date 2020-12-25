@@ -51,6 +51,11 @@ class Skills extends Component {
      
     render() { 
         let {contact , education , skills , projects , skinCode} = this.state;
+        contact = this.props.contactDetails;
+        education=this.props.educationDetails;
+        // skills = this.props.skills;
+        projects=this.props.projects;
+        skinCode =this.props.skinCode;
         return (
             <div className="skills-list">
                  <div className="contact-form">

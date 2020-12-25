@@ -7,7 +7,7 @@ import Skin5 from './Skin5';
 
 const Preview = (props) => {
   console.log(props);
-  console.log(props.skills);
+  // console.log(props.skills);
   let selectedSkin= props.skin;
   console.log(selectedSkin);
     return ( 
