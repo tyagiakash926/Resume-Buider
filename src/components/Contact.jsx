@@ -37,13 +37,17 @@ class Contact extends Component {
 
     componentWillReceiveProps(newProps){
         this.setState({
-            contact : newProps.contactDetails
+            contact : newProps.contactDetails,
+            skinCode :newProps.skinCode,
         })
      }
 
      componentDidMount(){
         console.log("inside component did mount !!!");
         console.log(this.props);
+        // this.setState({
+    
+        // })
     }
 
 

@@ -5,6 +5,8 @@ export const documentReducer = (state = initialState.document , action) => {
         return{ 
             ...state , skinCode : action.skinCode
         }
+    }else if(action.type =="FAILED_CHANGE_SKIN"){
+        return state;
     }
     return state;
 };

@@ -35,9 +35,8 @@ function App(props) {
           </React.Fragment>);
 }
 const mapStateToProps = (state) =>{
-  console.log(state);
+  // console.log(state);
   return{
-    
     auth : state.firebase.auth
   }
 }

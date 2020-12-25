@@ -79,3 +79,6 @@
 .fa-check-circle:hover{
     color:black
 }
+.preview-form-template{
+    display: none;
+}

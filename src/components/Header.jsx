@@ -19,7 +19,7 @@ const Header = (props) => {
             <div className="header-links">
                 {auth.uid ?
                 <ul>
-                <li><Link to="/templates">Resume Templates</Link></li>
+                <li><Link to="/">Resume Templates</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/" onClick={()=>{handleLogout(props.logout)}}>Logout</Link></li>
                 </ul> :

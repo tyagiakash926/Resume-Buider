@@ -5,5 +5,9 @@ export const skillReducer = (state = initialState.skills , action) => {
         return action.skills
         ;
     }
+    else if(action.type=="FAILED_UPDATE_SKILL"){
+        console.log(action.error);
+        return state;
+    }
     return state;
 };

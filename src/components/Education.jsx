@@ -23,10 +23,12 @@ class Education extends Component {
         })
     }
 
-    onSubmitContactDetails = ()=>{
+    onSubmitEducationalDetails = (e)=>{
         // documentId => collection// db me save hojaega
         // navigate to /education
+        console.log("on Submit before");
         this.props.updateEducationDetails(this.state.education);
+        console.log("on Submit after");
         // history object
         this.props.history.push("/skills");
     }
@@ -75,7 +77,7 @@ class Education extends Component {
                         <input type="text" id="graduationYear" value={education.graduationYear} onChange={ (e) =>{  this.onChangeHandler(e)  }   }/>
                     </div>
                     <div className="next full">
-                        <button className="btn" onClick={ this.onSubmitContactDetails }>Next</button>
+                        <button className="btn" onClick={ (e)=>{this.onSubmitEducationalDetails(e)} }>Next</button>
                     </div>
                     <div className="back full">
                         <Link to="/contact">
@@ -105,8 +107,9 @@ return {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        updateEducationDetails : (educationDetails) => {updateEductaion(educationDetails)}
+    return { 
+    // {dispatch(updateEductaion(educationDetails))}
+        updateEducationDetails : (educationDetails) =>  { dispatch( updateEductaion(educationDetails)  ) }
     }
 }
 

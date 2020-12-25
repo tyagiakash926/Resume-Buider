@@ -3,6 +3,7 @@
     margin-top: 100px;
     justify-content: space-evenly;
     margin-bottom: 50px;
+    /* max-width: 100vw; */
 }
 
 .contact-form{
@@ -15,7 +16,7 @@
 }
 
 .preview-form{
-    width: 35%;
+    width:40%;
     /* background: lightblue; */
     box-shadow: 0 2px 9px rgba(186 , 186 , 186 , 0.5);
 }

@@ -3,20 +3,24 @@
     flex-direction: column;
     align-items: center;
     /* margin: 50px; */
+    background: white;
     /* background: cadetblue; */
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 1px;
+    height: calc(100vh - 68px);
 }
 .landingpage-intro{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .landingpage-intro h1{
     margin-left: 5%;
 }
 .landingpage-logo{
-    margin-top: 40px;
+    margin-top: 3px;
     height: 300px;
-    width: 300px;
+    width: 295px;
 }
 .landingpage-logo img{
     height: 100%;
@@ -28,10 +32,19 @@
     color: white;
     border-radius: 5px;
     padding: 10px;
-    border:1px solid white;
+    border: 1px solid white;
     position: absolute;
-    /* top:50%;
-    left: 25%; */
-    margin-left: 15%;
+    margin-left: 0%;
+    margin-top: 7%;
     cursor: pointer;
+}
+.loading-icon{
+    width: 20%;
+    height: 45%;
+    /* margin-left: 38%; */
+}
+.loading-icon img{
+    height: 110%;
+    width: 100%;
+    border-radius: 50%;
 }

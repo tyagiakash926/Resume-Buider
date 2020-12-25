@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LandingPage.css';
 import skin from  "../static/images/3123473.jpg";
+import loadingicon from "../static/images/DearWellinformedDalmatian-size_restricted.gif"
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -26,7 +27,9 @@ class Landing  extends Component {
             <p>create a Resume that perfectly describe your skills and match your job profile</p>
             {this.props.firebaseAuth.uid ? 
             <button className="landingpage-btn" onClick={this.getStartedHandler}>Get Started For Free</button>:
-            <span>Loading......</span>}  
+            <div className="loading-icon">
+                <img src={loadingicon} alt=""/>
+            </div> }  
         </div>
         <div className="landingpage-logo">
             <img src={skin} alt=""/>

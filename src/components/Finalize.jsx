@@ -3,11 +3,9 @@ import './Finalize.css';
 import { connect } from 'react-redux';
 import {skinCodes} from '../Constants/skinCodes'
 import Preview from './Preview';
-import skin1 from "../static/images/skin1.svg";
-import skin2 from "../static/images/skin2.svg";
-import skin3 from "../static/images/skin3.svg";
-import skin4 from "../static/images/skin4.svg";
-import { Link } from "react-router-dom";
+import { updateDocument } from '../actions/documentActions';
+import Pdf from 'react-to-pdf'
+
 
 
 class Finalize extends Component {
@@ -37,14 +35,25 @@ class Finalize extends Component {
         }
 
     render() { 
+        const ref = React.createRef();
         console.log(this.props);
         let {contact , education , skills , projects , skinCode } = this.state;
         return ( 
             <React.Fragment>
                 <div className="finalize">
-                    <div className="final-preview">
-                        <Preview contact={contact} education={education} skills={skills} projects={projects} skin={skinCode}></Preview>
-                    </div>
+                    
+                        <div className="final-preview"  ref={ref}>
+                            <Preview contact={contact} education={education} skills={skills} projects={projects} skin={skinCode}></Preview>
+                        </div>
+                        <div className="download-btn">
+                            <Pdf targetRef={ref} filename="resume.pdf"  scale={1.1}>
+                                {({ toPdf }) => (
+                                <button className="btn" onClick={toPdf}>Generate pdf</button>
+                                )}
+                            </Pdf>
+                        </div>
+        
+                    
                     <div className="final-templates">
                     {skinCodes.map(  ( skin ) => {
                     let className = skin.value == skinCode ? "selected-skin" : "";
@@ -91,7 +100,7 @@ const mapStateToProps = (state) =>{
 
     const mapDispatchToProps = (dispatch) =>{
         return{
-            changeSkinCode : (skinCode) => {  dispatch( {type:"CHANGE_SKIN" , skinCode : skinCode} )}
+            changeSkinCode : (skinCode) => {  dispatch(updateDocument(skinCode) )}
         }
     }
     

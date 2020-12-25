@@ -14,6 +14,7 @@ const Skin1  = (props) => {
         country,
         pin,
     }  = props.contact;
+    
 
     let {cgpa , city:educationCity , state:educationState , degree , collegeName , graduationMonth , graduationYear} = props.education ;
     let skills = props.skills;
@@ -27,6 +28,7 @@ const Skin1  = (props) => {
     <li key={obj.projectName}>{obj.projectName} :: {obj.description}</li>
     );
     return ( 
+        
        
         <React.Fragment>
             
